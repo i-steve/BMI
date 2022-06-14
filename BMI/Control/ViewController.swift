@@ -17,22 +17,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        textLabel.text = "FIND YOUR \n BMI  "
     }
     
     var h :Float = 1.5
     var w :Int = 100
     
+    //height
     @IBAction func heightChange(_ sender: UISlider) {
         h = Float(String(format: "%.2f", sender.value))!
-        heightLabel.text = "\(h)m"
+        heightLabel.text = "\(h)m"  //height
     }
     
+    //weight
     @IBAction func weightChange(_ sender: UISlider) {
         w = Int(sender.value)
         weightLabel.text = "\(w)kg"
     }
     
+    //BMI
     @IBAction func calculate(_ sender: UIButton) {
         let bmi = bmiCalc(h,w)
         textLabel.text = "Your Result \n \(String(format: "%.1f", bmi))"
