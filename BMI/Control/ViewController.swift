@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     //height
     @IBAction func heightChange(_ sender: UISlider) {
         h = Float(String(format: "%.2f", sender.value))!
-        heightLabel.text = "\(h)m"  //height
+        heightLabel.text = "\(h)m"
     }
     
     //weight
