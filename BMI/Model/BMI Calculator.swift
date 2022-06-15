@@ -14,6 +14,7 @@ import Foundation
         return bmi
     }
     
+    //tips
     func messeage() -> String{
         if bmi <= 18.5{
             return "Add more carbs"
