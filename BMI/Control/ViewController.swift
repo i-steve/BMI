@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textLabel.text = "FIND YOUR \n BMI  "
+        textLabel.text = "LET'S FIND YOUR \n BMI  "
     }
     
     var h :Float = 1.5
