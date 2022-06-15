@@ -17,9 +17,9 @@ import Foundation
     func messeage() -> String{
         if bmi <= 18.5{
             return "Add more carbs"
-        }else if bmi <= 24{
+        }else if bmi <= 25{
             return "Maintain same Diet"
-        }else if bmi <= 40{
+        }else if bmi <= 30{
             return "Cut some carbs"
         }else{
             return "Cut most carbs"
