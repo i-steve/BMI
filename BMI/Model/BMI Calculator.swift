@@ -8,6 +8,6 @@
 import Foundation
 
 func bmiCalc(_ h:Float, _ w:Int) -> Float{
-    return Float(w)/(h*h)       // weight divided by square of height 
+    return Float(w)/(h*h)       // BMI is weight divided by square of height
 }
 
