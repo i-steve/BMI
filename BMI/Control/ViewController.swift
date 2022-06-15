@@ -20,26 +20,26 @@ class ViewController: UIViewController {
         textLabel.text = "LET'S FIND YOUR \n BMI  "
     }
     
-    var h :Float = 1.5
-    var w :Int = 100
     
-    //height
+    var h :Float = 1.5  //height
+    var w :Int = 100    //weight
+    
     @IBAction func heightChange(_ sender: UISlider) {
         h = Float(String(format: "%.2f", sender.value))!
         heightLabel.text = "\(h)m"
     }
     
-    //weight
     @IBAction func weightChange(_ sender: UISlider) {
         w = Int(sender.value)
         weightLabel.text = "\(w)kg"
     }
     
-    //BMI
     @IBAction func calculate(_ sender: UIButton) {
-        let bmi = bmiCalc(h,w)
-        textLabel.text = "Your Result \n \(String(format: "%.1f", bmi))"
+        let bmi = calc(h, w)
+        textLabel.text = "Your Result \n \(String(format: "%.1f", bmi)) \n \(messeage())"
     }
+    
+    
     
 }
 

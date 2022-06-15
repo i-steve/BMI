@@ -7,7 +7,23 @@
 
 import Foundation
 
-func bmiCalc(_ h:Float, _ w:Int) -> Float{
-    return Float(w)/(h*h)       // BMI is weight divided by square of height
-}
+    var bmi: Float!
+
+    func calc(_ h:Float, _ w:Int) -> Float{
+        bmi = Float(w)/(h*h)       // BMI is weight divided by square of height
+        return bmi
+    }
+    
+    func messeage() -> String{
+        if bmi <= 18.5{
+            return "Add more carbs"
+        }else if bmi <= 24{
+            return "Maintain same Diet"
+        }else if bmi <= 40{
+            return "Cut some carbs"
+        }else{
+            return "Cut most carbs"
+        }
+    }
+    
 
