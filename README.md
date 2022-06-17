@@ -5,7 +5,7 @@
 #Be Fit!
 
 ![bmi-in-adults](https://user-images.githubusercontent.com/81131990/173752144-79452846-7977-484e-b742-3275feb1d8b4.jpeg)
+<br>
 
-<img src="https://user-images.githubusercontent.com/81131990/174247335-aed1461f-aeb7-4525-af42-cf559688ca78.png" alt="drawing" width="200"/>
 
-<img src="https://user-images.githubusercontent.com/81131990/174247335-aed1461f-aeb7-4525-af42-cf559688ca78.png" alt="drawing" width="200"/>" alt="drawing" width="200"/>
+<img src="https://user-images.githubusercontent.com/81131990/174247335-aed1461f-aeb7-4525-af42-cf559688ca78.png" alt="drawing" width="200"/>            <img src="https://user-images.githubusercontent.com/81131990/174247335-aed1461f-aeb7-4525-af42-cf559688ca78.png" alt="drawing" width="200"/>
