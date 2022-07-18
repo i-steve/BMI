@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43CA63B52881955E0042DB7D /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA63B42881955D0042DB7D /* BMI.swift */; };
+		43ECBF0A28754A870056D156 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ECBF0928754A870056D156 /* ResultViewController.swift */; };
 		AA581E872859086300F005D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA581E862859086300F005D5 /* AppDelegate.swift */; };
 		AA581E892859086300F005D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA581E882859086300F005D5 /* SceneDelegate.swift */; };
 		AA581E8B2859086300F005D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA581E8A2859086300F005D5 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43CA63B42881955D0042DB7D /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
+		43ECBF0928754A870056D156 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		AA581E832859086300F005D5 /* BMI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA581E862859086300F005D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA581E882859086300F005D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				AAA96F7D28590E5400913706 /* BMI Calculator.swift */,
+				43CA63B42881955D0042DB7D /* BMI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -82,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				AA581E8A2859086300F005D5 /* ViewController.swift */,
+				43ECBF0928754A870056D156 /* ResultViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -165,9 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43ECBF0A28754A870056D156 /* ResultViewController.swift in Sources */,
 				AA581E8B2859086300F005D5 /* ViewController.swift in Sources */,
 				AAA96F7E28590E5400913706 /* BMI Calculator.swift in Sources */,
 				AA581E872859086300F005D5 /* AppDelegate.swift in Sources */,
+				43CA63B52881955E0042DB7D /* BMI.swift in Sources */,
 				AA581E892859086300F005D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,10 +321,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BMI;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -327,8 +338,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BMI.BMI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BMI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -340,10 +352,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BMI;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -354,8 +369,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BMI.BMI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BMI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

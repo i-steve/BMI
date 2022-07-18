@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
@@ -20,6 +19,7 @@ class ViewController: UIViewController {
         textLabel.text = "LET'S FIND YOUR \n BMI  "
     }
     
+    var bmiCalculator = BMICalculator()
     
     var h :Float = 1.5  //height
     var w :Int = 100    //weight
@@ -35,11 +35,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculate(_ sender: UIButton) {
-        let bmi = calc(h, w)
-        textLabel.text = "Your Result \n \(String(format: "%.1f", bmi)) \n \(messeage())"
+        bmiCalculator.getValues(h: h, w: w)
+        self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult"{
+            
+            let destinationVC = segue.destination as! ResultViewController
+        
+            destinationVC.value = bmiCalculator.getBMI()
+            destinationVC.tip = bmiCalculator.getTip()
+            destinationVC.color = bmiCalculator.getColor()
+        }
+    }
     
 }
 

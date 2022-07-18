@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="6QY-sS-lqf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="6QY-sS-lqf">
                                 <rect key="frame" x="0.0" y="0.0" width="429" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yIg-YQ-45B">
@@ -131,14 +132,95 @@
                         <outlet property="heightLabel" destination="OFP-vm-Det" id="2CT-vx-jmK"/>
                         <outlet property="textLabel" destination="Rtm-W1-FRD" id="Oze-8g-5ib"/>
                         <outlet property="weightLabel" destination="0uc-OL-fxm" id="K4E-dN-ZuG"/>
+                        <segue destination="fvO-aB-Twq" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="keY-hg-Hiv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="64.955357142857139"/>
+            <point key="canvasLocation" x="90" y="-93"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="YIp-a0-s86">
+            <objects>
+                <viewController id="fvO-aB-Twq" customClass="ResultViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="41E-b5-6Dv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eh-Qu-O7i">
+                                <rect key="frame" x="20" y="802" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Svb-Bv-aRS"/>
+                                </constraints>
+                                <color key="tintColor" red="0.44705724720000001" green="0.66237491370000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="RECALCULATE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.44705724720000001" green="0.66237491370000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recaculatePressed:" destination="fvO-aB-Twq" eventType="touchUpInside" id="jR6-IN-wrf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULTS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hXk-ze-bcf">
+                                <rect key="frame" x="58.5" y="310" width="297" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="XZE-tA-2O2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-vo-P0k">
+                                <rect key="frame" x="122.5" y="400" width="169" height="96"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="80"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VCI-5w-Mop">
+                                <rect key="frame" x="187.5" y="506" width="39" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PmQ-LG-hlK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial Black" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KJ9-Xi-4r9"/>
+                        <color key="backgroundColor" red="0.74542671439999997" green="0.90326225760000001" blue="0.99006003139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Axb-vo-P0k" firstAttribute="top" secondItem="hXk-ze-bcf" secondAttribute="bottom" constant="10" id="7x3-NG-X4r"/>
+                            <constraint firstItem="3eh-Qu-O7i" firstAttribute="bottom" secondItem="KJ9-Xi-4r9" secondAttribute="bottom" id="GVq-YD-7Zs"/>
+                            <constraint firstItem="Axb-vo-P0k" firstAttribute="centerX" secondItem="41E-b5-6Dv" secondAttribute="centerX" id="HOr-uJ-w2z"/>
+                            <constraint firstItem="3eh-Qu-O7i" firstAttribute="centerX" secondItem="Axb-vo-P0k" secondAttribute="centerX" id="Viv-4F-v6v"/>
+                            <constraint firstItem="Axb-vo-P0k" firstAttribute="centerY" secondItem="41E-b5-6Dv" secondAttribute="centerY" id="ZCK-2I-4y9"/>
+                            <constraint firstItem="VCI-5w-Mop" firstAttribute="centerX" secondItem="41E-b5-6Dv" secondAttribute="centerX" id="dWq-kN-ihg"/>
+                            <constraint firstItem="hXk-ze-bcf" firstAttribute="centerX" secondItem="41E-b5-6Dv" secondAttribute="centerX" id="dZJ-XF-7AV"/>
+                            <constraint firstItem="3eh-Qu-O7i" firstAttribute="centerX" secondItem="VCI-5w-Mop" secondAttribute="centerX" id="hPb-O5-cMk"/>
+                            <constraint firstItem="3eh-Qu-O7i" firstAttribute="leading" secondItem="KJ9-Xi-4r9" secondAttribute="leading" constant="20" id="jnH-DA-VwI"/>
+                            <constraint firstItem="3eh-Qu-O7i" firstAttribute="centerX" secondItem="41E-b5-6Dv" secondAttribute="centerX" id="qPT-Of-oeF"/>
+                            <constraint firstItem="VCI-5w-Mop" firstAttribute="top" secondItem="Axb-vo-P0k" secondAttribute="bottom" constant="10" id="y4i-vK-GXf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bmilabel" destination="Axb-vo-P0k" id="f3a-Dc-Crp"/>
+                        <outlet property="tipLabel" destination="VCI-5w-Mop" id="R41-Bc-nY4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7E-Gt-5Jf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763.768115942029" y="-93.080357142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg" width="674" height="1200"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
