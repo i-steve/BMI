@@ -17,11 +17,11 @@ struct BMICalculator{
         let bmiValue = Float(w)/(h*h)
         
         if bmiValue < 18.5{
-            bmi = BMI(value: bmiValue, tip: " Eat more!  ", color: UIColor(red: 1, green: 200/255, blue: 0, alpha: 1))
+            bmi = BMI(value: bmiValue, tip: " Eat more!\n Do Full Body exercises ", color: UIColor(red: 1, green: 200/255, blue: 0, alpha: 1))
         }else if bmiValue < 24.5{
-            bmi = BMI(value: bmiValue, tip: " Fit Enough!  ", color: UIColor(red: 51/255, green: 201/255, blue: 51/255, alpha: 1))
+            bmi = BMI(value: bmiValue, tip: " Fit Enough!\n Exercise 3-5 times a week ", color: UIColor(red: 51/255, green: 201/255, blue: 51/255, alpha: 1))
         }else{
-            bmi = BMI(value: bmiValue, tip: " Avoid Fatty Food!  ", color: UIColor(red: 1, green: 51/255, blue: 51/255, alpha: 1))
+            bmi = BMI(value: bmiValue, tip: " Avoid Fatty Food!\n Do More Cardio ", color: UIColor(red: 1, green: 51/255, blue: 51/255, alpha: 1))
         }
     }
     

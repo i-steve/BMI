@@ -180,13 +180,20 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VCI-5w-Mop">
-                                <rect key="frame" x="187.5" y="506" width="39" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VCI-5w-Mop">
+                                <rect key="frame" x="186.5" y="516" width="41.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PmQ-LG-hlK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial Black" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Tip">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="28" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
@@ -204,7 +211,7 @@
                             <constraint firstItem="3eh-Qu-O7i" firstAttribute="centerX" secondItem="VCI-5w-Mop" secondAttribute="centerX" id="hPb-O5-cMk"/>
                             <constraint firstItem="3eh-Qu-O7i" firstAttribute="leading" secondItem="KJ9-Xi-4r9" secondAttribute="leading" constant="20" id="jnH-DA-VwI"/>
                             <constraint firstItem="3eh-Qu-O7i" firstAttribute="centerX" secondItem="41E-b5-6Dv" secondAttribute="centerX" id="qPT-Of-oeF"/>
-                            <constraint firstItem="VCI-5w-Mop" firstAttribute="top" secondItem="Axb-vo-P0k" secondAttribute="bottom" constant="10" id="y4i-vK-GXf"/>
+                            <constraint firstItem="VCI-5w-Mop" firstAttribute="top" secondItem="Axb-vo-P0k" secondAttribute="bottom" constant="20" id="y4i-vK-GXf"/>
                         </constraints>
                     </view>
                     <connections>
