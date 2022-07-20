@@ -160,7 +160,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="recaculatePressed:" destination="fvO-aB-Twq" eventType="touchUpInside" id="jR6-IN-wrf"/>
+                                    <action selector="recalculatePressed:" destination="fvO-aB-Twq" eventType="touchUpInside" id="1k1-jy-HC7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULTS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hXk-ze-bcf">

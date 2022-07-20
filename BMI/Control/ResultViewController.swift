@@ -21,8 +21,8 @@ class ResultViewController: UIViewController {
         tipLabel.text = tip
         view.backgroundColor = color
     }
-    
-    @IBAction func recaculatePressed(_ sender: UIButton) {
+        
+    @IBAction func recalculatePressed(_ sender: UIButton) {
         dismiss(animated: true)
     }
 
